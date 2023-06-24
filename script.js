@@ -45,4 +45,21 @@ buttons.forEach((item)=>{
             display.innerText+= item.id;
         }
     }
-})
+});
+
+
+
+
+/* Activar el tema oscuro y claro */
+const themeToggleBtn = document.querySelector(".theme-toggler");
+const calculator = document.querySelector(".calculator");
+let isDark = true;
+
+themeToggleBtn.onclick=()=>{
+    /*Con classList decimos que afecte a todas las clases que esten 
+    dentro del div calculator*/
+    //Que afecte al switch o a la clase dark
+    calculator.classList.toggle("dark");
+    themeToggleBtn.classList.toggle("active");
+    isDark!=isDark;
+};

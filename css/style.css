@@ -91,6 +91,7 @@ body {
 }
 .theme-toggler::before {
   content: "";
+  position: absolute;
   width: 30px;
   height: 30px;
   top: 50%;
@@ -100,10 +101,10 @@ body {
   z-index: -1;
 }
 
-.theme-toggler .active {
+.theme-toggler.active {
   color: #333;
 }
-.theme-toggler .active::before {
+.theme-toggler.active::before {
   background-color: #fff;
 }
 
