@@ -29,16 +29,71 @@ body {
 }
 .calculator #display {
   color: #0a1e23;
+  margin: 0 10px;
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.calculator #equal {
+  height: 130px;
 }
 .calculator button#clear {
   background-color: #ffd5d8;
   color: #fc4552;
 }
-.calculator .btn_number {
+.calculator .btn-number {
   background-color: #c3eaff;
   color: #000000;
 }
 .calculator .btn-operator {
   background-color: #ffd0fb;
   color: #f967f3;
+}
+.calculator .btn-equal {
+  background-color: #adf9e7;
+  color: #000;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -1;
+}
+
+.theme-toggler .active {
+  color: #333;
+}
+.theme-toggler .active::before {
+  background-color: #fff;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+button:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
