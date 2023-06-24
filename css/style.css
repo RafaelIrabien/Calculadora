@@ -57,6 +57,29 @@ body {
   background-color: #adf9e7;
   color: #000;
 }
+.calculator.dark {
+  background-color: #1B1B1B;
+}
+.calculator.dark #display {
+  color: #f8fafb;
+}
+.calculator.dark #clear {
+  background-color: #4C35AA;
+  color: white;
+}
+.calculator.dark .btn-number {
+  background-color: #8EFDA6;
+  color: black;
+  font-weight: 600;
+}
+.calculator.dark .btn-operator {
+  background-color: #F0DB4F;
+  color: black;
+}
+.calculator.dark .btn-equal {
+  background-color: #F23B00;
+  color: #ffffff;
+}
 
 .theme-toggler {
   position: absolute;
