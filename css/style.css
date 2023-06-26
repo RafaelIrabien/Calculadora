@@ -5,8 +5,25 @@
   font-family: sans-serif;
 }
 
+:root {
+  --primary1: #534ad3;
+  --primary2: #b4dff6;
+  --primary3: #4C35AA;
+  --primary4: #5d49ad;
+  --success1: #8EFDA6;
+  --success2: #7af194;
+  --danger: #ec4550;
+  --danger2: #e5767d;
+  --black: #000000;
+  --gray: #bababa;
+  --gray2: #3a3838;
+}
+
 body {
-  background: linear-gradient(45deg, #f06291, #fffde7);
+  background: linear-gradient(45deg, var(--primary1), #fffde7);
+}
+body.dark1 {
+  background: linear-gradient(45deg, var(--primary1), var(--black));
 }
 
 .container {
@@ -24,12 +41,13 @@ body {
   width: auto;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 30px rgb(187, 130, 130);
+  box-shadow: 0 0 30px rgb(130, 159, 187);
   background-color: #fff;
 }
 .calculator #display {
+  background-color: var(--gray);
   color: #0a1e23;
-  margin: 0 10px;
+  margin: 26px 0 0 0;
   height: 120px;
   width: auto;
   display: flex;
@@ -37,48 +55,52 @@ body {
   justify-content: flex-end;
   font-size: 30px;
   margin-bottom: 20px;
+  border: 1px var(--black) solid;
+  border-radius: 10px;
 }
 .calculator #equal {
   height: 130px;
 }
 .calculator button#clear {
-  background-color: #ffd5d8;
-  color: #fc4552;
+  background-color: var(--danger);
+  color: var(--black);
 }
 .calculator .btn-number {
-  background-color: #c3eaff;
-  color: #000000;
+  background-color: var(--primary2);
+  color: var(--black);
 }
 .calculator .btn-operator {
-  background-color: #ffd0fb;
-  color: #f967f3;
+  background-color: var(--danger2);
+  color: var(--black);
 }
 .calculator .btn-equal {
   background-color: #adf9e7;
-  color: #000;
+  color: var(--black);
 }
 .calculator.dark {
   background-color: #1B1B1B;
 }
 .calculator.dark #display {
+  background-color: var(--gray2);
   color: #f8fafb;
+  border: 1px white solid;
 }
 .calculator.dark #clear {
-  background-color: #4C35AA;
+  background-color: var(--primary3);
   color: white;
 }
 .calculator.dark .btn-number {
-  background-color: #8EFDA6;
+  background-color: var(--success1);
   color: black;
   font-weight: 600;
 }
 .calculator.dark .btn-operator {
-  background-color: #F0DB4F;
-  color: black;
+  background-color: var(--primary4);
+  color: white;
 }
 .calculator.dark .btn-equal {
-  background-color: #F23B00;
-  color: #ffffff;
+  background-color: var(--success2);
+  color: black;
 }
 
 .theme-toggler {
