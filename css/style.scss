@@ -21,10 +21,9 @@
 
 body{
     background: linear-gradient(45deg, var(--primary1), #fffde7);
-
+    transition: 0.5s;
     &.dark1 {
             background: linear-gradient(45deg, var(--primary1), var(--black));
-        
         
     }
 }
@@ -47,6 +46,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 30px rgb(130, 159, 187);
     background-color: #fff;
+    transition: 0.5s;
 
     #display {
         background-color: var(--gray);
@@ -63,6 +63,7 @@ body{
         margin-bottom: 20px;
         border: 1px var(--black) solid;
         border-radius: 10px;
+        transition: 0.5s;
     }
 
     #equal {
@@ -93,32 +94,38 @@ body{
     //dark theme
     &.dark {
         background-color: #1B1B1B;
+        transition: 0.5s;
 
         #display {
             background-color: var(--gray2);
             color: #f8fafb;
             border: 1px white solid;
+            transition: 0.5s;
         }
 
         #clear {
             background-color: var(--primary3);
             color: white;
+            transition: 0.5s;
         }
 
         .btn-number {
             background-color: var(--success1);
             color: black;
             font-weight: 600;
+            transition: 0.5s;
         }
 
         .btn-operator {
             background-color: var(--primary4);
             color: white;
+            transition: 0.5s;
         }
     
         .btn-equal {
             background-color: var(--success2);
             color: black;
+            transition: 0.5s;
         }
     }
 }
@@ -128,32 +135,53 @@ body{
 
 
 .theme-toggler {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-    &::before {
-        content: '';
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background-color: #333;
-        z-index: -1;
-    }
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    border-radius: 160px;
+    background-color: #c0c0c0;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1), 
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.toggler-icon {
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #444, #222);
+        cursor: pointer;
+        transform: scale(0.9);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+        transition: 0.5s;
+}
 
 .theme-toggler.active {
     color: #333;
     &::before {
-        background-color: #fff;
+        background-color: #00000000;
+        transition: 0.5s;
     }
+
+    .toggler-icon {
+        left: 30px;
+        box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1), 
+            inset 0 4px 4px rgba(255, 255, 255, 0),
+            inset 0 -4px 4px rgba(255, 255, 255, 0.17);
+        background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+        transition: 0.5s;
+    }
+
 }
+
+
 
 
 button {
